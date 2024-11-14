@@ -3,59 +3,111 @@
 
 
 
-/*-------------------- CSS REST ---------------------------------------------------*/
-html {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    
+/*-------------------- CSS RESET ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-*,*:before,*:after {
-    box-sizing:inherit;
-
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
-
-img{
-    max-width:100%;
-
-
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 
+:root {
+    font-family: "Habibi", serif;
+    font-size: 1.25em;
+    --green:#06A816;
+    --orange:#E75D02;
+    --black:#000000;
+    --white:#ffffff;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+body {
+    min-width:428px;
+    max-width:1440px;
+
+}
+
+header,footer {
+    background-color: #06A816;
+    width:100%;
+}
+    
 
 h1 {
     font-family:Irish Grover;
     text-shadow:2px 2px 2px black;
-    font-size:2.5em;
+   font-size:2.5em;
     color:#ffffff; 
-    background-color:#06A816;
     text-align:center;
     padding-top:5%;
        
 }
  
 
-header {
+header p {
     color:#ffffff; 
-    background-color:#06A816; 
-    justify-content:center;
+    text-align:center;
     
        
 }
-.subtitle{
-    text-align: center;
-    margin:0;
+p {
+    
+    margin:5%;
     padding-bottom:10px;
+    font-family:Habibi;
+  
     
 }
 
 h2{
    font-family:Irish Grover;
    font-size:1.75em;
-   margin:8px;
+   
+  
   
    
 }
@@ -69,44 +121,51 @@ h3  {
 
 
 }
-p{
-    text-align:justify;
+ h2,p{
+    
     word-spacing:5px;
-    margin:0;
-    line-height:30px;
+    margin:10px;
+    text-align:left;
+    line-height: 1.25em;    
    
 }
 
-nav{
-    margin:5px;
-    max-width:350px;
     
-
-}
 nav li {
     background-color:#E75D02;
     color:#ffffff;
     display:block;
     list-style:none;
-    margin:3%;
     padding:10px 2px 10px 2px;
-    text-align:center;
     border-radius:5px;
     font-family:Habibi;
+    margin:auto;
+    margin-top:25px;
+    font-weight:bold;
+    font-size: 1.25em;
+   text-align:center;
+    width:300px;
+    
+    
     
 }
 
-.hidden {
+.Top {
     background-color:#E75D02;
     color:#ffffff;
     list-style:none;
-    padding:15px 10px 15px 10px;
+    padding:2px 10px 2px 10px;
     border-radius:7%;
     font-family:Habibi;
-    float:right;
     font-size:1.25em;
     border:solid 2px white;
-    visibility:hidden;
+    max-width:50px;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+   
+  
+   
     
 
 
@@ -114,16 +173,12 @@ nav li {
 
 main{
     background-color:#ffffff;
-    font-family:Habibi;
-    font-size:1.25em;
     
 }
-p {
-text-align:left;
-}
+
 
 .container {
-    margin:0px;
+    margin:-10px;
 }
 
 
@@ -132,29 +187,15 @@ footer {
     background-color:#06A816;
     color: #ffffff;
     text-align:center;
-    padding:10px 10px;
-        
+    
+     
 }
  li{
     list-style:none;
 
 }
-  h4{
-    background-color:#ffffff;
-    color:#06A816;
-    font-family:Habibi;
-    text-align:center;
+  
     
- }
-
- h1{
-    text-align:center;
-
-}
-
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
-
-
 
 section  {
     display:grid;
@@ -185,7 +226,7 @@ section  {
     padding:20px;
   }
     
-    .centered { 
+    figcaption { 
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -199,61 +240,165 @@ section  {
     max-width: 180px;
     }     
   
- 
- nav li{
-     
-     font-family:Habibi;
-     font-weight:bold;
-     font-size: 1.25em;
-     text-align: center;
+  footer h2 {
+    text-align:center;
+
+
  }
+ dt, dd {
+    display:inline;
+    
+
+ }
+
+ footer small{
+    text-align:center;
+    background-color: #ffffff;
+    color:#06A816;
+}
+   
+ 
 
 
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 
-@media (min-width:834px) {
+@media screen and (min-width:834px)
 
+{
+     header {
+       display:grid;
+       grid-template-columns: 2fr 2fr 2fr ;
+       grid-template-rows: 1fr ;
+      
+       
+    }
+    h1{
+        display:grid;
+        grid-column: 1/4;
+        position:relative;
+        bottom:10px;
+    }
+     header p {
+        display:grid;
+        grid-column: 4/6;
+        position:relative;
+        top:15px;
+        right:25px;
+        
 
-section {
+     }
 
+     nav li{
+        display:grid;
+        display:inline-block;
+        position:relative;
+        left:120px;
+
+        
+     }
+
+     footer{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+     }
+     footer h2{
+        display:grid;
+        position:relative;
+        right:25px;
+
+     }
+      
+footer small{
     display:grid;
-    grid-template-columns: 1fr 1fr ;
     
-}
-
-  nav ul{
-   display:grid;
-    grid-template-columns:500px 500px;
-    max-width:300px;
-}
-
-footer {
-    display:grid;
- grid-template-columns: 1fr 1fr;
 
 }
+    
+     
+    }
+    
+       
+    
+
+
  
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 
-@media (min-width:1280px) {
+@media screen and (min-width:1280px) {
 
-   header,section {
-    display:flex;
-    justify-content:left;
+
+    h1 {
+      position:relative;
+      right:230px;
+      bottom:35px;
+
+    }
+    header p{
+        position:relative;
+        right:830px;
+        top:50px;
+    }
+     nav li{
+        display:grid;
+        display:inline-block;
+        position:relative;
+        bottom:80px;
+        left:640px;
+        border:solid 2px white;
+        
+     }
+
+     footer h2 {
+        display:grid;
+        position:relative;
+        right:200px;
+     }
+     address {
+        display:grid;
+        position:relative;
+        bottom:100px;
+        left:150px;
+     }
+      
     
-   }
- 
+     
 }
 
+
  
-}
 
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
-@media (min-width:1440px) {
-   main{
-    max-width:1840px;
-   }
-    
-    }
+@media screen and (min-width:1440px) {
+
+    h1 {
+        position:relative;
+        right:300px;
+        bottom:35px;
+  
+      }
+      header p{
+          position:relative;
+          right:980px;
+          top:50px;
+      }
+       nav li{
+          
+          display:inline-block;
+          position:relative;
+          bottom:80px;
+          left:800px;
+          border:solid 2px white;
+          
+       }
+       .Mon, .Tues, .Wed, .Thurs, .Fri, .Sat, .Sun {
+        position:relative;
+        left:120px;
+
+       }
+
+
+
+}
+   
